@@ -1,0 +1,13 @@
+<h1>Edit Tasks</h1>
+<%= form_for @task do |f| %>
+<%= f.label :task %>
+<%= f.text_field :task %>
+<br/>
+<%= f.label :priority %>
+<%= f.select :priority, options_for_select([' ', '1 - Top Priority', '2', '3', '4', '5 - Low Priority'])%>
+<br/>
+<%= f.label :completed %>
+<%= f.check_box :completed %>
+<br/>
+<%= f.submit %>
+<% end %>
